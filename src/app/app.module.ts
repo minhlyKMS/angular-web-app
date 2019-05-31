@@ -8,16 +8,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppBootstrapModule } from './app-bootstrap.module';
 
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './components/heroes/heroes.component';
-import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
-import { LoginPageComponent } from './components/login-page/login-page.component';
+import {
+  HeaderComponent,
+  UserProfileComponent,
+  ProductsComponent,
+  ProductDetailComponent
+} from './components';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    LoginPageComponent
+    HeaderComponent,
+    UserProfileComponent,
+    ProductsComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

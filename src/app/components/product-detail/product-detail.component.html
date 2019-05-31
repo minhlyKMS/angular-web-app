@@ -1,0 +1,9 @@
+<div *ngIf="product">
+  <h4>{{product.name | uppercase}} Details</h4>
+  <div>
+    <div><span>Id: </span>{{product.id}}</div>
+    <div><span>Name: </span>{{product.name}}</div>
+    <div><span>Price: </span>{{product.price}}</div>
+  </div>
+  <button type="submit" class="btn btn-success container-fluid">Buy</button>
+</div>

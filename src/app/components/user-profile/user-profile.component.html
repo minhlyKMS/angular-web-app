@@ -1,0 +1,20 @@
+<div class="user-profile dropdown" dropdown>
+  <div class="user-profile__avatar" dropdownToggle>
+    <div class="avatar-wrapper">
+      <img
+        src="assets/img/avatar.jpg"
+        alt="My Avatar"
+        width="50"
+        height="50">
+    </div>
+    <span>{{user?.name}}</span>
+    <i class="caret"></i>
+  </div>
+  <ul *dropdownMenu class="user-profile__options dropdown-menu dropdown-menu-right">
+    <li class="dropdown-item"><a href="#">Profile Settings</a></li>
+    <li class="dropdown-item"><a href="#">Your History</a></li>
+    <li class="dropdown-item"><a href="#">Something else here</a></li>
+    <li role="separator" class="divider dropdown-divider"></li>
+    <li class="dropdown-item"><a href="#">Log out</a></li>
+  </ul>
+</div>

@@ -1,0 +1,40 @@
+<mlkms-header
+  [toggleBtnPosition]="'left'"
+  [toggleButtonTemplate]="customToggleSidebar"
+  [userProfileTemplate]="isLoggedIn ? userProfileTemplate : loginButton"
+>
+</mlkms-header>
+
+<ng-template #customToggleSidebar>
+  <div class="hambuger-logo-wrapper" (click)="onHambugerButtonClick()">
+    <img
+      src="assets/img/hambuger.png"
+      alt="Sidebar menu toggler"
+      class="hambuger-logo"
+      width="64"
+      height="64">
+  </div>
+</ng-template>
+
+<ng-template #loginButton>
+  <button type="button" class="btn btn-primary" (click)="openModal(modalTemplate)">
+    Log in
+  </button>
+</ng-template>
+
+<ng-template #userProfileTemplate>
+  <app-user-profile [user]="userInfo"></app-user-profile>
+</ng-template>
+
+<ng-template #modalTemplate>
+  <div class="modal-header">
+      <h4 class="modal-title pull-left">Login</h4>
+      <button type="button" class="close pull-right" 
+              aria-label="Close" (click)="modalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </div>
+  <div class="modal-body">
+    <mlkms-login (loginHandler)="execOnLogin($event)"></mlkms-login>
+  </div>
+</ng-template>

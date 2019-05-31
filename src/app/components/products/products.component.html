@@ -1,0 +1,11 @@
+<h2>My Products</h2>
+
+<ul class="products">
+  <li *ngFor="let product of products">
+    <div>
+      <span class="badge">{{product.id}}</span>
+      <span>{{product.name}}</span>
+    </div>
+    <app-product-detail class='product-detail' [product]="product"></app-product-detail>
+  </li>
+</ul>

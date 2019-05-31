@@ -1,61 +1,24 @@
-<mlkms-header>
-  <section class="navbar navbar-default">
-    <section class="header-content--left">
-      <div class="header-logo-container">
-        <a class="navbar-brand" href="https://www.kms-technology.com/">
-          <img
-            src="https://www.kms-technology.com/wp-content/uploads/2018/10/logo.png"
-            alt="KMS Technology"
-            class="logo"
-          >
-        </a>
-      </div>
-      <div class="header-menu-container">
-        <ul>
-          <li>Menu 1</li>
-          <li>Menu 2</li>
-          <li>Menu 3</li>
-          <li>Menu 4</li>
-        </ul>
-      </div>
-    </section>
-    <section class="header-content--right">
-      <button type="button" class="btn btn-primary" (click)="openModal(template)">
-        Log in
-      </button>
-    </section>
-  </section>
-</mlkms-header>
-<mlkms-sidebar-menu [opened]="opened" [position]="sidebarPosition"></mlkms-sidebar-menu>
+<app-header (onHambugerButtonToggle)="toggleSideBar()"></app-header>
+<mlkms-sidebar-menu [opened]="opened" [position]="sidebarPosition">
+  <div class="sidebar__header">
+    <div class="close-icon-wrapper" (click)="toggleSideBar()">
+      <img src="assets/img/close-icon.png" width="24" height="24">
+    </div>
+  </div>
+  <ul class="sidebar__menu-items">
+    <li><a href="page1">Page 1</a></li>
+    <li><a href="page2">Page 2</a></li>
+    <li><a href="page3">Page 3</a></li>
+    <li><a href="page4">Page 4</a></li>
+  </ul>
+</mlkms-sidebar-menu>
+
 <section class="main-page-content">
   <div style="text-align:center">
-    <h1>Welcome to {{ title }}!</h1>
+    <h3>Welcome to {{ title }}!</h3>
   </div>
-  <h2>Here are some links to help you start: </h2>
-  <ul>
-    <li>
-      <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-    </li>
-    <li>
-      <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-    </li>
-    <li>
-      <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-    </li>
-  </ul>
-  <app-heroes></app-heroes>
+  <h4>Here are some products for you: </h4>
+  <app-products></app-products>
 </section>
 <mlkms-footer></mlkms-footer>
 
-<ng-template #template>
-    <div class="modal-header">
-        <h4 class="modal-title pull-left">Modal</h4>
-        <button type="button" class="close pull-right" 
-                aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    </div>
-    <div class="modal-body">
-      <mlkms-login (loginHandler)="execOnLogin($event)"></mlkms-login>
-    </div>
-</ng-template>
