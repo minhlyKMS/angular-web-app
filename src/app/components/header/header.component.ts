@@ -9,10 +9,10 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 export class HeaderComponent {
 
   modalRef: BsModalRef;
-  isLoggedIn: boolean = false;
+  isLoggedIn = false;
   userInfo: any;
 
-  @Output() onHambugerButtonToggle = new EventEmitter();
+  @Output() execHambugerButtonToggle = new EventEmitter();
 
   constructor(private modalService: BsModalService) { }
 
@@ -27,6 +27,6 @@ export class HeaderComponent {
   }
 
   onHambugerButtonClick() {
-    this.onHambugerButtonToggle.emit();
+    this.execHambugerButtonToggle.emit();
   }
 }

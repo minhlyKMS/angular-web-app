@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  HeaderComponent as CommonHeaderComponent,
+  LoginComponent
+ } from 'mlkms-common-ui';
 
 import { HeaderComponent } from './header.component';
+import { UserProfileComponent } from '../user-profile/user-profile.component';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -8,7 +13,12 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [
+        CommonHeaderComponent,
+        HeaderComponent,
+        LoginComponent,
+        UserProfileComponent
+      ]
     })
     .compileComponents();
   }));
