@@ -1,9 +1,20 @@
-<div *ngIf="product">
-  <h4>{{product.name | uppercase}} Details</h4>
-  <div>
-    <div><span>Id: </span>{{product.id}}</div>
-    <div><span>Name: </span>{{product.name}}</div>
-    <div><span>Price: </span>{{product.price}}</div>
+<div *ngIf="product" class="product-detail">
+  <div class="product-detail__title">
+    <span>Product Detail: {{product.name}}</span>
   </div>
-  <button type="submit" class="btn btn-success container-fluid">Buy</button>
+  <div class="product-detail__content">
+    <div>
+      <div><span class="product-detail__label">Name: </span>{{product.name}}</div>
+      <div><span class="product-detail__label">Code: </span>{{product.id}}</div>
+      <div><span class="product-detail__label">Availability: </span>{{product.availableDate}}</div>
+      <div><span class="product-detail__label">Price: </span>${{product.price}}</div>
+      <div><span class="product-detail__label">5 Star Rating: </span>{{product.rating}}</div>
+    </div>
+    <div class='product-detail__img-container'>
+      <img src={{product.imgSrc}} height="150" width="150">
+    </div>
+  </div>
+  <div class="product-detail__nav">
+    <button (click)="back()" class="btn btn-outline-secondary btn-sm">Back</button>
+  </div>
 </div>

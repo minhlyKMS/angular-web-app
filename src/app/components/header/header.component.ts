@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter, TemplateRef } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,10 @@ export class HeaderComponent {
 
   @Output() execHambugerButtonToggle = new EventEmitter();
 
-  constructor(private modalService: BsModalService) { }
+  constructor(
+    private modalService: BsModalService,
+    private router: Router
+  ) { }
 
   execOnLogin(userInfo: any) {
     this.isLoggedIn = true;
@@ -28,5 +32,13 @@ export class HeaderComponent {
 
   onHambugerButtonClick() {
     this.execHambugerButtonToggle.emit();
+  }
+
+  navigateToHomePage() {
+    this.router.navigate(['/homepage']);
+  }
+
+  navigateToProductPage() {
+    this.router.navigate(['/products']);
   }
 }

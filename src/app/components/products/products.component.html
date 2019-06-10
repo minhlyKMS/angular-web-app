@@ -1,11 +1,46 @@
-<h2>My Products</h2>
-
-<ul class="products">
-  <li *ngFor="let product of products">
+<div class="product-list">
+  <div class="product-list__title">
+    <span>Product List</span>
+  </div>
+  <div class="product-list__content">
     <div>
-      <span class="badge">{{product.id}}</span>
-      <span>{{product.name}}</span>
+      <span>Filter by: </span>
     </div>
-    <app-product-detail class='product-detail' [product]="product"></app-product-detail>
-  </li>
-</ul>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" class="col--center">
+            <button
+              class="btn btn-primary btn-sm"
+              (click)="toggleShowingImages()"
+            >
+              {{btnText}}
+            </button>
+          </th>
+          <th scope="col">Product</th>
+          <th scope="col">Code</th>
+          <th scope="col">Available</th>
+          <th scope="col">Price</th>
+          <th scope="col">5 Star Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td class="col--center">
+            <img *ngIf="imageShowed" src={{product.imgSrc}} height="50" width="50">
+          </td>
+          <td>
+            <a [routerLink]="['/products', product.id]">{{product.name}}</a>
+          </td>
+          <td>{{product.code}}</td>
+          <td>{{product.availableDate}}</td>
+          <td>{{product.price}}</td>
+          <td>
+            {{product.rating}}
+            <app-star-rating></app-star-rating>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

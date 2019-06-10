@@ -14,6 +14,9 @@ import {
   ProductsComponent,
   ProductDetailComponent
 } from './components';
+import { HomePageComponent } from './home-page/home-page.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import {
     HeaderComponent,
     UserProfileComponent,
     ProductsComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    HomePageComponent,
+    PageNotFoundComponent,
+    StarRatingComponent
   ],
   imports: [
     BrowserModule,

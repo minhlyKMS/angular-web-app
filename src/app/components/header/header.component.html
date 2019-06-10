@@ -1,7 +1,6 @@
 <mlkms-header
-  [toggleBtnPosition]="'left'"
   [toggleButtonTemplate]="customToggleSidebar"
-  [userProfileTemplate]="isLoggedIn ? userProfileTemplate : loginButton"
+  [headerMenuTemplate]="customHeaderMenu"
 >
 </mlkms-header>
 
@@ -36,5 +35,18 @@
   </div>
   <div class="modal-body">
     <mlkms-login (loginHandler)="execOnLogin($event)"></mlkms-login>
+  </div>
+</ng-template>
+
+<ng-template #customHeaderMenu>
+  <div class="header-menu-container">
+    <ul>
+      <li (click)="navigateToHomePage()">
+        Home
+      </li>
+      <li (click)="navigateToProductPage()">
+        Product List
+      </li>
+    </ul>
   </div>
 </ng-template>

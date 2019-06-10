@@ -1,0 +1,27 @@
+.product-detail {
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+
+  &__title {
+    padding: 16px 32px;
+    border-bottom: 1px solid #d8d8d8;
+    background-color: #e7e7e7;
+  }
+
+  &__nav {
+    padding: 16px 32px;
+    border-top: 1px solid #d8d8d8;
+    background-color: #e7e7e7;
+  }
+
+  &__content {
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__label {
+    min-width: 300px;
+    display: inline-block;
+  }
+}

@@ -1,24 +1,4 @@
 <app-header (execHambugerButtonToggle)="toggleSideBar()"></app-header>
-<mlkms-sidebar-menu [opened]="opened" [position]="sidebarPosition">
-  <div class="sidebar__header">
-    <div class="close-icon-wrapper" (click)="toggleSideBar()">
-      <img src="assets/img/close-icon.png" width="24" height="24">
-    </div>
-  </div>
-  <ul class="sidebar__menu-items">
-    <li><a href="page1">Page 1</a></li>
-    <li><a href="page2">Page 2</a></li>
-    <li><a href="page3">Page 3</a></li>
-    <li><a href="page4">Page 4</a></li>
-  </ul>
-</mlkms-sidebar-menu>
-
 <section class="main-page-content">
-  <div style="text-align:center">
-    <h3>Welcome to {{ title }}!</h3>
-  </div>
-  <h4>Here are some products for you: </h4>
-  <app-products></app-products>
+  <router-outlet></router-outlet>
 </section>
-<mlkms-footer></mlkms-footer>
-

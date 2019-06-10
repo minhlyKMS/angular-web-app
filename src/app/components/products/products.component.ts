@@ -9,6 +9,8 @@ import { ProductService } from '../../services';
 })
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
+  imageShowed = false;
+  btnText = 'Show Image';
 
   constructor(private productService: ProductService) { }
 
@@ -19,5 +21,14 @@ export class ProductsComponent implements OnInit {
   getProducts(): void {
     this.productService.getProducts()
       .subscribe(products => this.products = products);
+  }
+
+  toggleShowingImages() {
+    this.imageShowed = !this.imageShowed;
+    if (this.imageShowed) {
+      this.btnText = 'Hide Image';
+    } else {
+      this.btnText = 'Show Image';
+    }
   }
 }
