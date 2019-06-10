@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-star-rating',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./star-rating.component.scss']
 })
 export class StarRatingComponent implements OnInit {
-
-  constructor() { }
+  @Input() value: number = 0;
+  percentage: number = 0;
 
   ngOnInit() {
+    this.percentage = this.value / 5 * 100;
+    console.log('percentage', this.percentage);
   }
-
 }

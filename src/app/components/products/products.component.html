@@ -36,8 +36,7 @@
           <td>{{product.availableDate}}</td>
           <td>{{product.price}}</td>
           <td>
-            {{product.rating}}
-            <app-star-rating></app-star-rating>
+            <app-star-rating [value]="product.rating"></app-star-rating>
           </td>
         </tr>
       </tbody>

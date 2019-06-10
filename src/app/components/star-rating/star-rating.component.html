@@ -1,0 +1,22 @@
+<div class="rating-container">
+  <span class="rating-value">{{value}}</span>
+  <div class="rating-stars">
+    <span class="stars-wrapper stars-wrapper--empty">
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+    </span>
+    <span
+      class="stars-wrapper stars-wrapper--filled"
+      [ngStyle]="{'width.%': percentage}"
+    >
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+    </span>
+  </div>
+</div>

@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { switchMap } from 'rxjs/operators';
-// import { Observable } from 'rxjs';
 
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
@@ -13,9 +12,6 @@ import { ProductService } from 'src/app/services';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
-
-  // @Input() product: Product;
-  // product$: Observable<Product>;
   product: Product;
 
   constructor(

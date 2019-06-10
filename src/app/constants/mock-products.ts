@@ -17,7 +17,7 @@ export const MOCK_PRODUCTS: Product[] = [
     price: '32.99',
     imgSrc: 'assets/img/garden-cart.png',
     availableDate: 'March 18, 2016',
-    rating: 4.2
+    rating: 4.4
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const MOCK_PRODUCTS: Product[] = [
     price: '8.90',
     imgSrc: 'assets/img/hammer.png',
     availableDate: 'May 21, 2016',
-    rating: 4.8
+    rating: 4
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ export const MOCK_PRODUCTS: Product[] = [
     price: '11.55',
     imgSrc: 'assets/img/saw.png',
     availableDate: 'May 15, 2016',
-    rating: 3.8
+    rating: 2.8
   },
   {
     id: 5,
@@ -44,6 +44,6 @@ export const MOCK_PRODUCTS: Product[] = [
     price: '35.95',
     imgSrc: 'assets/img/game-controller.png',
     availableDate: 'October 15, 2015',
-    rating: 4.6
+    rating: 4.7
   }
 ];
